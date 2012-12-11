@@ -1,0 +1,33 @@
+{
+  "name": "ide-init",
+  "description": "Generate ide template.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/binchen911/ide-init",
+  "author": {
+    "name": "IDE Team"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/binchen911/ide-init.git"
+  },
+  "bugs": {
+    "url": "https://github.com/binchen911/ide-init/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": ""
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "prompt": "~0.1.12",
+    "semver": "~1.0.14"
+  }
+}

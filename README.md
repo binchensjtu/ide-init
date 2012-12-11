@@ -1,4 +1,2 @@
-ide-init
-========
-
-ide initial
+# ide-init
+> Generate project template.
