@@ -20,7 +20,12 @@ module.exports = function (grunt) {
             serverHost:'localhost',
             serverPort:8080,
             wserverPort:8080,
-            fileServerPort:8050
+            fileServerPort:8050,
+            instrument:{
+                instrumentDir:'artifacts/builds/hybridapp',
+                instrumentIgnoreDir:['mojito'],
+                instrumentIgnoreFileRegex:["^mojito.*\.js$", "^LazyLoad.*\.js$", "loader.*\.js"]
+            }
         },
         //specify pakcages to be add to maitai repository, for multi-pakcage used. Reserved.
         push:{
@@ -32,10 +37,12 @@ module.exports = function (grunt) {
             devorship:'dev',
             simordev:'simulator'//determin the localhost or internet IP
 
-            //host:'',			//maitail server host
-            //port:'',			//maitail server port
-            //initialtime:'',	//RT initial waiting time
-            //frequency:''	    //RT query maitai frequency.
+            //host:'',  //maitail server host
+            //port:'',  //maitail server port
+            //initialtime:'',
+            //RT initial waiting time
+            //frequency:''
+            //RT query maitai frequency.
         },
 
         package:{
@@ -64,7 +71,7 @@ module.exports = function (grunt) {
     });
 
     // Alias the `default` task to run `build:ios` task instead
-    //	User can manual schedule task
+    // User can manual schedule task
     grunt.registerTask('default', 'build:ios');
 
 };
